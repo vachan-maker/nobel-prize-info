@@ -1,6 +1,8 @@
 <script>
     import { Carousel } from 'flowbite-svelte';
-    import images from './imageData/images.json';
+    const images = [
+      
+    ]
   </script>
   
   <div class="max-w-4xl">

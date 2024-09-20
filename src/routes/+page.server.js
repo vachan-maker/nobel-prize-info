@@ -1,6 +1,9 @@
+<script>
+    export  let year;
+</script>
 export async function load({fetch}) {
     try {
-        const response = await fetch('https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear=2023');
+        const response = await fetch(`https://api.nobelprize.org/2.1/nobelPrizes?nobelPrizeYear={year}`);
         if(!response.ok) {
             throw new Error('Response status: ${response.status}');
         }
