@@ -7,7 +7,9 @@
 </script>
 {#each nobelPrizes as nobelPrize}
 <h1>{nobelPrize.categoryFullName.en}</h1>
-{#each nobelPrize.laureates as laureate}
-<h2>{laureate.fullName.en}</h2>
+<div class="flex flex-row">
+    {#each nobelPrize.laureates as laureate}
+<Card heading="{laureate.fullName.en}" text="{laureate.motivation.en}"/>
 {/each}
+</div>
 {/each}
