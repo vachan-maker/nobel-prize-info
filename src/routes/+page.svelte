@@ -17,7 +17,11 @@
 <P>Date Awarded: {nobelPrize.dateAwarded}</P>
 <div class="flex flex-row gap-x-6 p-5">
     {#each nobelPrize.laureates as laureate}
-        <Card heading="{laureate.fullName.en}" text="{laureate.motivation.en}"/>
+    {#if laureate.orgName}
+    <Card heading={laureate.orgName.en} text={laureate.motivation.en}/>
+    {:else}
+    <Card heading={laureate.fullName.en} text={laureate.motivation.en}/>
+    {/if}
     {/each}
 </div>
 {/each}
