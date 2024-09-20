@@ -130,5 +130,5 @@
 </script>
 <Label>
     Choose an year
-    <Select class="mt-2" items={years} bind:value={selected} />
+    <Select class="mt-2" items={years} bind:value={selected} name="year"/>
   </Label>

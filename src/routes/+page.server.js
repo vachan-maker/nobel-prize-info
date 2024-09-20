@@ -1,4 +1,10 @@
 let year = 2022;
+export const actions = {
+	default: async ({ request }) => {
+		const formData = await request.formData();
+		year=formData.get("year");
+	}
+};
 
 export async function load({fetch}) {
     try {
