@@ -127,9 +127,8 @@
 { value: 2023, name: 2023 }
 
     ];
-    export let year;
 </script>
 <Label>
     Choose an year
-    <Select class="mt-2" items={years} bind:value={year} name="year"/>
+    <Select class="mt-2" items={years} bind:value={selected} name="year"/>
   </Label>
